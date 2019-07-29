@@ -17,8 +17,8 @@ public class LCS {
     // takes parameter strings s and t, and prints LCS
     public static void lcs(String s, String t) {
 
+        //fills 2d array arr with cumulative count of LCS
         int[][] arr = new int[s.length()+1][t.length()+1];
-        //creating table that counts LCS
         for(int i=1;i<=s.length();i++){
             for (int j=1; j<=t.length();j++){
                 arr[i][j]=Math.max(arr[i][j-1],arr[i-1][j]);
@@ -27,7 +27,7 @@ public class LCS {
                 }
             }
         }
-        //generates the LCS string from 2d array
+        //generates the LCS string from 2d array 
         StringBuilder sb = new StringBuilder();
         int r=s.length();
         int c=t.length();
