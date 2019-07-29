@@ -5,16 +5,17 @@ import java.io.InputStreamReader;
 public class LCS {
     public static void main(String[] args) throws IOException {
         //Takes standard inputs String s and String t
-        //Prints standard output LCS of s and t
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input first string: ");
         String s = br.readLine();
         System.out.println("Input second string: ");
         String t = br.readLine();
         br.close();
+        
         lcs(s,t);
     }
 
+    //takes two strings s and t as parameters, and prints their LCS and length of LCS
     public static void lcs(String s, String t) throws IOException {
 
         int[][] arr = new int[s.length()+1][t.length()+1];
