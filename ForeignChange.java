@@ -6,6 +6,9 @@ import java.util.StringTokenizer;
 
 public class ForeignChange {
 
+    //given a list of coin values and the amount to make change for,
+    // prints the minimum number of coins required to give exact change
+    // or print "impossible" if it is impossible to give exact change
     public static void main(String[]args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter change value");
